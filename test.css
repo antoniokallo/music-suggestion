@@ -65,7 +65,7 @@ form#form{
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -74,7 +74,7 @@ form#form{
   }
   
   /* Links inside the dropdown */
-  .dropdown-content a {
+  .dropdown-content ul {
     color: black;
     padding: 12px 16px;
     display: block;

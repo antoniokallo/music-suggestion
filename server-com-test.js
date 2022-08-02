@@ -1,3 +1,6 @@
+
+const dropDown = document.querySelector('.dropdown')
+
 const options = {
 	method: 'GET',
 	headers: {
@@ -6,8 +9,23 @@ const options = {
 	}
 };
 
-fetch('https://deezerdevs-deezer.p.rapidapi.com/search?q=liluzivert', options)
+fetch('https://deezerdevs-deezer.p.rapidapi.com/playlist/1677006641', options)
 	.then(response => response.json())
-	.then(data => console.log(data))
-	.catch(err => console.error(err));
+	.then( data => {
+		data.array.forEach(tracks => {
+			displayTracks(tracks)
+		});
+	})
 
+
+	.catch(err => console.error(err));
+	function displayTracks(tracks) {
+		tracks = data.tracks
+
+	}
+
+// dropDown = document.addEventListener('click', event => {
+
+
+
+// })
