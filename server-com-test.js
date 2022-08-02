@@ -1,5 +1,7 @@
 
-const dropDown = document.querySelector('.dropdown')
+const dropDown = document.querySelector('#dropdown')
+const detailedInfo = document.querySelector("#detailed-info")
+const music = document.querySelector('#music')
 
 const options = {
 	method: 'GET',
@@ -13,16 +15,24 @@ fetch('https://deezerdevs-deezer.p.rapidapi.com/playlist/1677006641', options)
 	.then(response => response.json())
 	.then( data => {
 		data.array.forEach(tracks => {
-			displayTracks(tracks)
-		});
-	})
+			const nameSpan = document.createElement("span");
+			nameSpan.innerText = tracks.name;
+	  
+			
+	  animalBar.append(nameSpan);
+			nameSpan.addEventListener("click", () => {
+	  
+			  music.textContent = tracks.name;
+			  animalImg.setAttribute("src", tracks.image);
+			});
+		  });
+		}
+		);
+	
 
 
-	.catch(err => console.error(err));
-	function displayTracks(tracks) {
-		tracks = data.tracks
+	
 
-	}
 
 // dropDown = document.addEventListener('click', event => {
 
