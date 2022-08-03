@@ -14,23 +14,38 @@ const Url = "https://api.deezer.com/playlist/10584916042"
 
 fetch(Url)
 	.then(res => res.json())
-  .then(data => {
-    data.tracks.data.forEach((song) => {
-      console.log(song.title)
+  .then(song => {
       renderSong(song)});
     
   })
 
 // make each click display xyz amount of songs
 
+
+
   function renderSong(song) {
+    song.tracks.data.forEach((song) => {
+
+      const span = document.querySelector('span')
+      const songName = document.getElementById('name')
+
+    span.addEventListener('click', () =>{
+
+      songName.textContent = song.title
+      
+      
+    })
+  })
+
+  
+    // const h1 = document.createElement('h1')
+
+    // details.append(h1)
+
+    // h1.innerText = song.title
     
-    const details = document.querySelector('#detailed-info')
-    const h1 = document.createElement('h1')
-
-    details.append(h1)
-
-    h1.innerText = song.title
+    
+      ;
 
     // let genreOne = document.querySelector('#Jazz')
  
@@ -45,4 +60,4 @@ fetch(Url)
   //   )}
 
   }
-   })
+   
