@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="test.css" />
     <title>Document</title>
-    <script  defer src="server-com-test.js"></script>
+
 </head>
 <body>
 
@@ -16,16 +16,26 @@
     <div class="top">
       <!--code to get the dropdown menu-->
         <div id="title">
-            <h1>MUSIC RECCOMENDATION</h1>
+            <h1>RECORD RECCOMENDATION</h1>
               </form>
              </div>
-  
-             <div class="dropdown">
-                <button class="dropbtn">GENRE</button>
-                <div class="dropdown-content">
-                  <ul>jazz</ul>
-                  <ul>hip/hop</ul>
-                  <ul>rock</ul>
+  <!-- Product Menu -->
+  <div id=“record-menu”>
+  </div>
+    <!-- Product Images Here -->
+             <div id=“dropdown”>
+              <label for=“genres”>Choose a Genre:</label>
+              <select name=“genres” id=“genre-selector”>
+                 
+                <option id=“Jazz”>Jazz</option>
+              
+              
+                <option id=“Hip Hop”>Hip Hop</option>
+              
+              
+                <option id="Rock">Rock</option>
+              
+              </select>
                 </div>
               </div>
   
@@ -44,5 +54,6 @@
         
         </div>
          </div>
+         <script  defer src="server-com-test.js"></script>
 </body>
 </html>
