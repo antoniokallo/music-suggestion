@@ -27,11 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     
   })
-  // const newMusicForm = document.querySelector('#Musicform')
-  //   newMusicForm.addEventListener('submit', () => {
-  //     renderMusic()
-  //   })
-  
+
   
   const renderJazz = async function () {
     const Url = "https://api.deezer.com/playlist/10584916042"
@@ -128,13 +124,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   barColor.addEventListener('focus', (event) => {
 
-    event.target.style.background = 'gray';
+    event.target.style.background = 'lightpink';
     
   })
 
   barColor.addEventListener('blur', (event) => {
     event.target.style.background = '';
   });
+  
   
 //  const renderMusic = async function (){
 //     e.preventDefault()
