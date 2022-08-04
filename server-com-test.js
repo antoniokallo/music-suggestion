@@ -83,17 +83,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     console.log(data)
     
-    data.tracks.data.forEach((song) => {
-      const detailedInfo = document.querySelector("#detailed-info")
+    // data.tracks.data.forEach((song) => {
+    //   const detailedInfo = document.querySelector("#detailed-info")
   
-      const pElement = document.createElement("p")
-      const songTitleText = document.createTextNode(song.title)
+    //   const pElement = document.createElement("p")
+    //   const songTitleText = document.createTextNode(song.title)
       
-      pElement.appendChild(songTitleText)
+    //   pElement.appendChild(songTitleText)
   
-      detailedInfo.appendChild(songTitleText)
-      detailedInfo.appendChild(document.createElement("br"))
-    })
+    //   detailedInfo.appendChild(songTitleText)
+    //   detailedInfo.appendChild(document.createElement("br"))
+    // })
 
   }
 //  const renderMusic = async function (){
