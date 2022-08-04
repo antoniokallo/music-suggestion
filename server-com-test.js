@@ -124,9 +124,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 // event.target.reset()
   })
 
+  const barColor = document.querySelector('#new-title')
+
+  barColor.addEventListener('focus', (event) => {
+
+    event.target.style.background = 'gray';
+    
+  })
+
+  barColor.addEventListener('blur', (event) => {
+    event.target.style.background = '';
+  });
   
-
-
 //  const renderMusic = async function (){
 //     e.preventDefault()
 
