@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const newMusicForm = document.querySelector('#newMusic')
 
-  newMusicForm.addEventListener('submit', event => {
+  document.addEventListener('submit', event => {
     event.preventDefault()
 
     const titleInput = event.target.title.value
@@ -120,9 +120,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       title: titleInput,
      
     }
-newMusicForm(newMusic)
-event.target.reset()
+// newMusicForm(newMusic)
+// event.target.reset()
   })
+
+  
 
 
 //  const renderMusic = async function (){
