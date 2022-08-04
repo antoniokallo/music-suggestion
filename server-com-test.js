@@ -83,19 +83,48 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     console.log(data)
     
-    // data.tracks.data.forEach((song) => {
-    //   const detailedInfo = document.querySelector("#detailed-info")
+    data.tracks.data.forEach((song) => {
+      const detailedInfo = document.querySelector("#detailed-info")
   
-    //   const pElement = document.createElement("p")
-    //   const songTitleText = document.createTextNode(song.title)
+      const pElement = document.createElement("p")
+      const songTitleText = document.createTextNode(song.title)
       
-    //   pElement.appendChild(songTitleText)
+      pElement.appendChild(songTitleText)
   
-    //   detailedInfo.appendChild(songTitleText)
-    //   detailedInfo.appendChild(document.createElement("br"))
-    // })
+      detailedInfo.appendChild(songTitleText)
+      detailedInfo.appendChild(document.createElement("br"))
+    })
 
   }
+
+  const newMusicForm = document.querySelector('#newMusic')
+
+  newMusicForm.addEventListener('submit', event => {
+    event.preventDefault()
+
+    const titleInput = event.target.title.value
+
+
+    const detailedInfo = document.querySelector("#detailed-info")
+
+    const pElement = document.createElement("p")
+    const songTitleText = document.createTextNode(titleInput)
+    
+    pElement.appendChild(songTitleText)
+
+    detailedInfo.appendChild(songTitleText)
+    detailedInfo.appendChild(document.createElement("br"))
+    
+
+    const newMusic = {
+      title: titleInput,
+     
+    }
+newMusicForm(newMusic)
+event.target.reset()
+  })
+
+
 //  const renderMusic = async function (){
 //     e.preventDefault()
 
