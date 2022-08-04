@@ -1,4 +1,3 @@
-
 /*what to accomplish 
   1. make list clickable 
   2. have songs show up when clicked
@@ -6,58 +5,110 @@
   4. have like button
 
 */
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
 
-const Url = "https://api.deezer.com/playlist/10584916042"
-
-//fetch. use data.tracks.data to jump directly to the song
-
-fetch(Url)
-	.then(res => res.json())
-  .then(song => {
-      renderSong(song)});
+  //fetch. use data.tracks.data to jump directly to the song
+  
     
-  })
-
-// make each click display xyz amount of songs
-
-
-
-  function renderSong(song) {
-    song.tracks.data.forEach((song) => {
-
-      const span = document.querySelector('span')
-      const songName = document.getElementById('name')
-
-    span.addEventListener('click', () =>{
-
-      songName.textContent = song.title
-      
-      
+  const jazzText = document.querySelector('#Jazz')
+    jazzText.addEventListener('click', () => {
+      renderJazz()
     })
+
+
+    const hipHopText = document.querySelector('#HipHop')
+    hipHopText.addEventListener('click', () => {
+      renderhiphop()
+    })
+
+    const rockText = document.querySelector('#Rock')
+    rockText.addEventListener('click', () => {
+      renderRock()
+
+    
   })
-
+  // const newMusicForm = document.querySelector('#Musicform')
+  //   newMusicForm.addEventListener('submit', () => {
+  //     renderMusic()
+  //   })
   
-    // const h1 = document.createElement('h1')
-
-    // details.append(h1)
-
-    // h1.innerText = song.title
-    
-    
-      ;
-
-    // let genreOne = document.querySelector('#Jazz')
- 
-  //   genreOne.addEventListener('click', (e) => {
-  //     const details = document.querySelector('#detailed-info')
-  //     const songName = document.createElement('h1')
-  //       songName.append(details)
-  //     songName.innerText = song.song.title
-
-  // }
   
-  //   )}
+  const renderJazz = async function () {
+    const Url = "https://api.deezer.com/playlist/10584916042"
+    
+    const response = await fetch(Url)
+    const data = await response.json()
+    
+    console.log(data)
+    
+    data.tracks.data.forEach((song) => {
+      const detailedInfo = document.querySelector("#detailed-info")
+  
+      const pElement = document.createElement("p")
+      const songTitleText = document.createTextNode(song.title)
+      
+      pElement.appendChild(songTitleText)
+  
+      detailedInfo.appendChild(songTitleText)
+      detailedInfo.appendChild(document.createElement("br"))
+    })
+  }
+
+  const renderhiphop = async function () {
+    const Url2 = "https://api.deezer.com/playlist/10586724822"
+    
+    const response = await fetch(Url2)
+    const data = await response.json()
+    
+    console.log(data)
+    
+    data.tracks.data.forEach((song) => {
+      const detailedInfo = document.querySelector("#detailed-info")
+  
+      const pElement = document.createElement("p")
+      const songTitleText = document.createTextNode(song.title)
+      
+      pElement.appendChild(songTitleText)
+  
+      detailedInfo.appendChild(songTitleText)
+      detailedInfo.appendChild(document.createElement("br"))
+    })
 
   }
-   
+  const renderRock = async function () {
+    const Url3 = "https://api.deezer.com/playlist/10586725502"
+    
+    const response = await fetch(Url3)
+    const data = await response.json()
+    
+    console.log(data)
+    
+    data.tracks.data.forEach((song) => {
+      const detailedInfo = document.querySelector("#detailed-info")
+  
+      const pElement = document.createElement("p")
+      const songTitleText = document.createTextNode(song.title)
+      
+      pElement.appendChild(songTitleText)
+  
+      detailedInfo.appendChild(songTitleText)
+      detailedInfo.appendChild(document.createElement("br"))
+    })
+
+  }
+//  const renderMusic = async function (){
+//     e.preventDefault()
+
+//     const genreInput = e.target.name.value
+//     const titleInput = e.target.song.title.value
+
+//     const newMusic = {
+//         name: genreInput,
+//         restaurant: titleInput,
+//     }
+
+//     renderRamenImg(newMusic)
+//     e.target.reset()
+//  }
+// })
+})

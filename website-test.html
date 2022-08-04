@@ -19,41 +19,46 @@
             <h1>RECORD RECCOMENDATION</h1>
               </form>
              </div>
-  <!-- Product Menu -->
-  <div id=“record-menu”>
+<!-- Product Menu -->
+<div id=“record-menu”>
+</div>
+<!-- Product Images Here -->
+<div id=genre>
+  <label for=“genrebar”>Choose a Genre:</label>
+
+  <div id='Jazz'>
+    <span>Jazz</span>
   </div>
-    <!-- Product Images Here -->
-             <div id=genre>
-              <label for=“genrebar”>Choose a Genre:</label>
-             
-                 
-                <span id=“Jazz”>Jazz</span>
-              
-              
-                <span id=“Hip Hop”>Hip Hop</span>
-              
-              
-                <span id="Rock">Rock</span>
-              
-              </select>
-                </div>
-              </div>
-  
+  <div id='HipHop'>
+    <span>Hip Hop</span>
   </div>
+  <div id='Rock'>
+    <span>Rock</span>
+  </div>
+
+  </select>
+</div>
+</div>
+
+</div>
 </div>
 
 <!---code to make music items appear when you click on the genre-->
 <div class="bottom">
-    <div id="music">
-      <div class="songInfo">
-        <div id="detailed-info">
-          <p id="name">song Name</p>
-          <img
-            id="image"
-            src=""
-       
-          />
-         </div>
-         <script  defer src="server-com-test.js"></script>
-</body>
-</html>
+  <div id="music">
+    <div class="songInfo">
+      <div id="detailed-info">
+        <img id="image" src="" />
+      </div>
+
+      <!--code to make a submit form-->
+      <form id="newMusic">
+        <h4>Add New music</h4>
+        <label for="genre">genre </label>
+        <input type="text" name="genre" id="new-genre" />
+        <label for="title">title </label>
+        <input type="text" name="title" id="new-title" />
+      <script defer src="server-com-test.js"></script>
+      </body>
+
+      </html>
