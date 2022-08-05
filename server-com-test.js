@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   barColor.addEventListener('blur', (event) => {
     event.target.style.background = '';
   });
+<<<<<<< HEAD
   const commentsList = document.querySelector('#comments-list');
   const commentForm = document.getElementById('comment-form');
   const commentInput = document.querySelector('.comment-input')
@@ -128,3 +129,26 @@ document.addEventListener('DOMContentLoaded', async () => {
 //Submit should always be attached to the form - because Mozilla says so
 //For unique elements please use ID and not class
 // Reserve classes primarily for styling purposes
+=======
+
+  const commentsList = document.querySelector('#comments-list');
+  const commentForm = document.querySelector('#comment-form');
+
+  commentForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let input = event.target.comment.value;
+    commentsList.append(input);
+    console.log('comment', comment);
+    commentForm.reset();
+    commentsList.forEach((input) => {
+      let li = document.createElement('li');
+      li.innerText = input;
+      input = comment;
+      commentsList.append(input);
+      // comment = li.textContent;
+      // input.textContent = comment;
+      // commentsList.append(comment);
+    });
+  }); 
+});
+>>>>>>> 4d5fa6ea04c889c9ff7179620e30d9f07b2407c0
