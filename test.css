@@ -90,3 +90,20 @@ div {
   background-color: #F082AC;
 }
 
+h3{
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-width: 20px;
+  border-color: lightblue;
+  border-style: solid;
+  display: inline-block;
+  border-radius: 50px;
+    background-color: lightblue;
+    text-emphasis-color: black;
+}
+
+.li{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: darkblue;
+  font-size: large;
+}
